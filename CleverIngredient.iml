@@ -39,5 +39,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="com.github.stefanbirkner:system-rules:1.2.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.github.stefanbirkner:system-lambda:1.2.0" level="project" />
   </component>
 </module>

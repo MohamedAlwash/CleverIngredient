@@ -1,14 +1,18 @@
 import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static com.github.stefanbirkner.systemlambda.SystemLambda.tapSystemOut;
 
 
 class MenuTest {
 
     @Test
-    void menuList() {
+    void testMenuList() throws Exception {
         Menu menu = new Menu();
-        menu.menuList();
 
-//        Assert.assertEquals("Voer een cijfer in!", menu.menuList());
+//        String text = tapSystemOut(menu::menuList);
+//
+//        Assertions.assertEquals("Voer een cijfer in!", text.trim());
     }
 }
