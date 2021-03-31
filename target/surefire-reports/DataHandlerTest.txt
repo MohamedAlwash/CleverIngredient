@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: DataHandlerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec <<< FAILURE!
+DataHandlerTest.testShowPersons()  Time elapsed: 0.005 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at DataHandlerTest.testShowPersons(DataHandlerTest.java:9)
+Caused by: java.lang.ClassNotFoundException: org.junit.Assert
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 19 more
+
