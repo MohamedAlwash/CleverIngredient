@@ -9,7 +9,9 @@ public class DataHandlerTest {
     public void testShowPersons() {
         assertFalse(DataHandler.showPersons(false));
 
-        DataHandler.addPerson("mo", "alwash");
+        assertFalse(DataHandler.addPerson("2", "23"));
+
+        assertTrue(DataHandler.addPerson("mo", "alwash"));
 
         assertTrue(DataHandler.showPersons(false));
     }
@@ -18,8 +20,8 @@ public class DataHandlerTest {
     public void testShowRecipes() {
         assertFalse(DataHandler.showRecipes());
 
-//        DataHandler.addRecipe("Lasagne");
+        DataHandler.addRecipe("Lasagne");
 
-//        assertTrue(DataHandler.showRecipes());
+        assertTrue(DataHandler.showRecipes());
     }
 }

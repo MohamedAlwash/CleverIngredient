@@ -9,10 +9,10 @@ public class Menu {
             {
                 case 1:// Persoon toevoegen
                     System.out.println("Wat is uw voornaam");
-                    String firstName = Checker.checkInputString();
+//                    String firstName = Checker.checkInputString();
                     System.out.println("Wat is uw achternaam");
-                    String lastName = Checker.checkInputString();
-                    DataHandler.addPerson(firstName, lastName);
+//                    String lastName = Checker.checkInputString();
+//                    DataHandler.addPerson(firstName, lastName);
                     break;
                 case 2:// Lijst van personen laten zien
                     DataHandler.showPersons(false);
@@ -33,7 +33,7 @@ public class Menu {
                     break;
                 case 5:// Recepten toevoegen
                     System.out.println("Wat is de naam van de recept die u wilt toevoegen?");
-                    DataHandler.addRecipe(Checker.checkInputString());
+//                    DataHandler.addRecipe(Checker.checkInputString());
                     break;
                 case 6:// Recepten bekijken
                     if(DataHandler.showRecipes())
