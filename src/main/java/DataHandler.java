@@ -4,9 +4,14 @@ public class DataHandler {
     final private static ArrayList<Person> persons = new ArrayList<>();
     final private static ArrayList<Recipe> recipes = new ArrayList<>();
 
-    public static void addPerson(String firstName, String lastName)
+    public static boolean addPerson(String firstName, String lastName)
     {
-        persons.add(new Person(firstName, lastName));
+        if(Checker.checkInputString(firstName) && Checker.checkInputString(lastName))
+        {
+            persons.add(new Person(firstName, lastName));
+            return true;
+        }
+        return false;
     }
 
     public static boolean showPersons(boolean question)
@@ -14,7 +19,7 @@ public class DataHandler {
         int i = 1;
         if(persons.isEmpty())
         {
-            System.out.println("U moet eerst personen toevoegen");
+//            System.out.println("U moet eerst personen toevoegen");
 
             return false;
         }else {

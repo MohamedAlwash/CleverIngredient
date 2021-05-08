@@ -1,6 +1,9 @@
 public interface IIngredient {
 
-    void addIngredient();
+    static void addIngredient()
+    {
+
+    };
 
     void showIngredient();
 }
