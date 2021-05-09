@@ -5,16 +5,14 @@ import static org.junit.Assert.assertTrue;
 
 public class DataHandlerTest {
 
-    @Test
-    public void testShowPersons() {
-        assertFalse(DataHandler.showPersons(false));
-
-        assertFalse(DataHandler.addPerson("2", "23"));
-
-        assertTrue(DataHandler.addPerson("mo", "alwash"));
-
-        assertTrue(DataHandler.showPersons(false));
-    }
+//    @Test
+//    public void testShowPersons() {
+//        assertFalse(DataHandler.showPersons(false));
+//
+//        assertFalse(DataHandler.addPerson("2", "23"));
+//
+//        assertTrue(DataHandler.addPerson("mo", "alwash"));
+//    }
 
     @Test
     public void testShowRecipes() {
