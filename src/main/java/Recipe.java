@@ -4,6 +4,8 @@ public class Recipe {
     final private String name;
     final private ArrayList<Ingredient> ingredients = new ArrayList<>();
 
+
+
     public Recipe(String name)
     {
         this.name = name;
