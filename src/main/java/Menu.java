@@ -7,6 +7,7 @@ public class Menu {
         {
             switch(this.choice)
             {
+
                 case 1:// Persoon toevoegen
                     System.out.println("Wat is uw voornaam");
                     String firstName = Checker.checkInputString();
