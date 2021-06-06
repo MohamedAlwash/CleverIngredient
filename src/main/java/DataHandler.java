@@ -9,7 +9,7 @@ public class DataHandler {
         persons.add(new Person(firstName, lastName));
     }
 
-    public static boolean showPersons(boolean question)
+    public static boolean showPersons()
     {
         int i = 1;
         if(persons.isEmpty())
@@ -18,9 +18,7 @@ public class DataHandler {
 
             return false;
         }else {
-            if (question) {
-                System.out.println("Kies een index wie u bent");
-            }
+            System.out.println("Kies een index wie u bent");
             for(Person person : persons)
             {
                     System.out.println(i++ + ") " + person.getFirstName() + " " + person.getLastName());
@@ -31,12 +29,12 @@ public class DataHandler {
 
     public static void addIngredientToPerson(int choosePerson)
     {
-        persons.get(choosePerson - 1).getStock().addIngredient();
+        persons.get(choosePerson - 1).getHasStock().addIngredient();
     }
 
     public static void showIngredientFromPerson(int choosePerson)
     {
-        persons.get(choosePerson - 1).getStock().showIngredient();
+        persons.get(choosePerson - 1).getHasStock().showIngredient();
     }
 
     public static void addRecipe(String name)
@@ -49,7 +47,7 @@ public class DataHandler {
     {
         if(recipes.isEmpty())
         {
-            System.out.println("Er zijn geen recepten, voeg eerst recepten toe.");
+            System.out.println("Er zijn geen recepten, voeg eerst recept toe.");
             return false;
         }else {
             System.out.println("Welke ingrediënten wilt u zien van de volgende recepten?");

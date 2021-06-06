@@ -1,13 +1,13 @@
 public class Person {
     final private String firstName;
     final private String lastName;
-    final private Stock stock;
+    final private Stock hasStock;
 
     public Person(String firstName, String lastName)
     {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.stock = new Stock();
+        this.hasStock = new Stock();
     }
 
     public String getFirstName()
@@ -20,8 +20,8 @@ public class Person {
         return this.lastName;
     }
 
-    public Stock getStock()
+    public Stock getHasStock()
     {
-        return this.stock;
+        return this.hasStock;
     }
 }

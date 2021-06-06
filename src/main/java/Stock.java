@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
-public class Stock implements IIngredient {
-    final static private ArrayList<Ingredient> ingredients = new ArrayList<>();
+public class Stock {
+    final private ArrayList<Ingredient> ingredients = new ArrayList<>();
 
     public void addIngredient()
     {
@@ -14,13 +14,6 @@ public class Stock implements IIngredient {
             {
                 break;
             }else {
-                for(Ingredient ingredient : ingredients)
-                {
-                    if (ingredient.getName().equals(newIngredient))
-                    {
-                        System.out.print("U heeft dit al op voorraad, voer opnieuw in");
-                    }
-                }
                 ingredients.add(new Ingredient(newIngredient));
             }
         }

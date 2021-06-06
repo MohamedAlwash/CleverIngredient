@@ -23,11 +23,6 @@ public class Recipe {
             if (newIngredient.equals("stop")) {
                 break;
             }else {
-                for (Ingredient ingredient : ingredients) {
-                    if (ingredient.getName().equals(newIngredient)) {
-                        System.out.print(newIngredient + "is al aanwezig in deze recept ");
-                    }
-                }
                 ingredients.add(new Ingredient(newIngredient));
             }
         }
@@ -40,18 +35,5 @@ public class Recipe {
         {
             System.out.println(ingredient.getName());
         }
-    }
-
-    public boolean addIngrediënt(ArrayList<String> nieuwIngredienten)
-    {
-        if(nieuwIngredienten.size() >= 4 && nieuwIngredienten.size() <= 15)
-        {
-            for(String ingredient : nieuwIngredienten)
-            {
-                ingredients.add(new Ingredient(ingredient));
-            }
-            return true;
-        }
-        return false;
     }
 }
