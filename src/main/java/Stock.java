@@ -10,6 +10,7 @@ public class Stock {
         while(true)
         {
             String newIngredient = Checker.checkInputString();
+
             if(newIngredient.equals("stop"))
             {
                 break;
