@@ -18,7 +18,7 @@ public abstract class Recipe {
 
     public void preparationMethod()
     {
-                System.out.println("De volgende ingrediënten behoren tot deze recept " + this.getName());
+        System.out.println("De volgende ingrediënten behoren tot deze recept " + this.getName());
         this.showIngredient();
         this.showSpecialIngredient();
     }

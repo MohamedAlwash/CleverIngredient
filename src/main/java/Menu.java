@@ -16,18 +16,18 @@ public class Menu {
                     DataHandler.getInstance().addPerson(firstName, lastName);
                     break;
                 case 2:// Lijst van personen laten zien
-                    DataHandler.showPersons();
+                    DataHandler.getInstance().showPersons();
 
                     break;
                 case 3:// Voorraad toevoegen aan een persoon
-                    if(DataHandler.showPersons())
+                    if(DataHandler.getInstance().showPersons())
                     {
                         DataHandler.getInstance().addIngredientToPerson(Checker.checkInputInt());
                     }
 
                     break;
                 case 4:// Voorraad bekijken van een persoon
-                    if(DataHandler.showPersons())
+                    if(DataHandler.getInstance().showRecipes())
                     {
                         DataHandler.getInstance().showIngredientFromPerson(Checker.checkInputInt());
                     }

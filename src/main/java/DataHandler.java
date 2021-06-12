@@ -20,7 +20,7 @@ public class DataHandler {
         persons.add(new Person(firstName, lastName));
     }
 
-    public static boolean showPersons()
+    public boolean showPersons()
     {
         int i = 1;
         if(persons.isEmpty())
