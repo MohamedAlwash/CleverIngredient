@@ -13,7 +13,7 @@ public class Menu {
                     String firstName = Checker.checkInputString();
                     System.out.println("Wat is uw achternaam");
                     String lastName = Checker.checkInputString();
-                    DataHandler.addPerson(firstName, lastName);
+                    DataHandler.getInstance().addPerson(firstName, lastName);
                     break;
                 case 2:// Lijst van personen laten zien
                     DataHandler.showPersons();
@@ -22,24 +22,26 @@ public class Menu {
                 case 3:// Voorraad toevoegen aan een persoon
                     if(DataHandler.showPersons())
                     {
-                        DataHandler.addIngredientToPerson(Checker.checkInputInt());
+                        DataHandler.getInstance().addIngredientToPerson(Checker.checkInputInt());
                     }
 
                     break;
                 case 4:// Voorraad bekijken van een persoon
                     if(DataHandler.showPersons())
                     {
-                        DataHandler.showIngredientFromPerson(Checker.checkInputInt());
+                        DataHandler.getInstance().showIngredientFromPerson(Checker.checkInputInt());
                     }
                     break;
                 case 5:// Recepten toevoegen
+                    System.out.println("Wilt u een italiaans recept of een speciaal recept toevoegen");
+                    String receipe = Checker.checkInputString();
                     System.out.println("Wat is de naam van de recept die u wilt toevoegen?");
-                    DataHandler.addRecipe(Checker.checkInputString());
+                    DataHandler.getInstance().addRecipe(Checker.checkInputString(), receipe);
                     break;
                 case 6:// Recepten bekijken
-                    if(DataHandler.showRecipes())
+                    if(DataHandler.getInstance().showRecipes())
                     {
-                        DataHandler.showIngredientFromRecipe(Checker.checkInputInt());
+                        DataHandler.getInstance().showIngredientFromRecipe(Checker.checkInputInt());
                     }
 
 

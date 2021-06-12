@@ -14,12 +14,12 @@ public class DataHandlerTest {
 //        assertTrue(DataHandler.addPerson("mo", "alwash"));
 //    }
 
-    @Test
-    public void testShowRecipes() {
-        assertFalse(DataHandler.showRecipes());
-
-        DataHandler.addRecipe("Lasagne");
-
-        assertTrue(DataHandler.showRecipes());
-    }
+//    @Test
+//    public void testShowRecipes() {
+//        assertFalse(DataHandler.showRecipes());
+//
+//        DataHandler.addRecipe("Lasagne");
+//
+//        assertTrue(DataHandler.showRecipes());
+//    }
 }

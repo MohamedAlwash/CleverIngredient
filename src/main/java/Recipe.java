@@ -1,8 +1,5 @@
-import java.util.ArrayList;
-
-public class Recipe {
+public abstract class Recipe {
     final private String name;
-    final private ArrayList<Ingredient> ingredients = new ArrayList<>();
 
     public Recipe(String name)
     {
@@ -14,26 +11,15 @@ public class Recipe {
         return this.name;
     }
 
-    public void addIngredient()
-    {
-        System.out.println("Welke ingerdiënt wilt u toevoegen aan uw recept?");
-        System.out.println("Typ stop om af te breken.");
-        while(true) {
-            String newIngredient = Checker.checkInputString();
-            if (newIngredient.equals("stop")) {
-                break;
-            }else {
-                ingredients.add(new Ingredient(newIngredient));
-            }
-        }
-    }
+    public abstract void showIngredient();
+    public abstract String showSpecialIngredient();
 
-    public void showIngredient()
+    public abstract void addIngredient();
+
+    public void preparationMethod()
     {
-        System.out.println("De volgende ingrediënten behoren tot deze recept " + this.getName());
-        for(Ingredient ingredient : ingredients)
-        {
-            System.out.println(ingredient.getName());
-        }
+                System.out.println("De volgende ingrediënten behoren tot deze recept " + this.getName());
+        this.showIngredient();
+        this.showSpecialIngredient();
     }
 }

@@ -1,10 +1,21 @@
+import javax.xml.crypto.Data;
 import java.util.ArrayList;
 
 public class DataHandler {
     final private static ArrayList<Person> persons = new ArrayList<>();
     final private static ArrayList<Recipe> recipes = new ArrayList<>();
+    private static DataHandler dataHandler;
 
-    public static void addPerson(String firstName, String lastName)
+    private DataHandler(){}
+
+    public static DataHandler getInstance() {
+        if(dataHandler == null) {
+            dataHandler = new DataHandler();
+        }
+        return dataHandler;
+    }
+
+    public void addPerson(String firstName, String lastName)
     {
         persons.add(new Person(firstName, lastName));
     }
@@ -27,23 +38,29 @@ public class DataHandler {
         }
     }
 
-    public static void addIngredientToPerson(int choosePerson)
+    public void addIngredientToPerson(int choosePerson)
     {
         persons.get(choosePerson - 1).getHasStock().addIngredient();
     }
 
-    public static void showIngredientFromPerson(int choosePerson)
+    public void showIngredientFromPerson(int choosePerson)
     {
         persons.get(choosePerson - 1).getHasStock().showIngredient();
     }
 
-    public static void addRecipe(String name)
+
+    public void addRecipe(String name, String whichRecipe)
     {
-        recipes.add(new Recipe(name));
-        recipes.get(recipes.size()-1).addIngredient();
+        if(whichRecipe.equals("italiaans")) {
+            recipes.add(new ItalianRecipe(name));
+            recipes.get(recipes. size()-1).addIngredient();
+        }else {
+            recipes.add(new SpecialRecipe(name));
+            recipes.get(recipes.size()-1).addIngredient();
+        }
     }
 
-    public static boolean showRecipes()
+    public boolean showRecipes()
     {
         if(recipes.isEmpty())
         {
@@ -60,8 +77,8 @@ public class DataHandler {
         }
     }
 
-    public static void showIngredientFromRecipe(int chooseRecipe)
+    public void showIngredientFromRecipe(int chooseRecipe)
     {
-        recipes.get(chooseRecipe - 1).showIngredient();
+        recipes.get(chooseRecipe - 1).preparationMethod();
     }
 }
